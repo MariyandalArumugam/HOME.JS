@@ -1,0 +1,63 @@
+import React from "react";
+import "./styles.css"; // Ensure you style with padding, font size, etc.
+
+const Home = () => {
+  return (
+    <div className="home-container" style={{ padding: "2rem", fontFamily: "Arial" }}>
+      <h1 style={{ color: "#5A2A83" }}>Best Elder Support Services in India</h1>
+      <h2 style={{ color: "#333", marginTop: "1rem" }}>
+        Comprehensive, Personalized & Proactive Support for Senior Citizens
+      </h2>
+      <p style={{ marginTop: "1rem", fontSize: "16px", lineHeight: "1.6" }}>
+        <strong>Elder Hub</strong> is a compassionate platform designed to connect <strong>senior citizens</strong> with dedicated <strong>volunteers</strong>. 
+        Our mission is to provide <strong>mental, physical, and emotional support</strong> to elderly individuals who need it most.
+        Volunteers can respond to alerts, offer companionship, help with <strong>grocery shopping</strong>, <strong>meditation assistance</strong>, and much more.
+      </p>
+
+      <button style={{
+        marginTop: "1.5rem",
+        backgroundColor: "#FF7A00",
+        color: "white",
+        border: "none",
+        padding: "10px 20px",
+        fontSize: "16px",
+        cursor: "pointer",
+        borderRadius: "5px"
+      }}>
+        Request Support Now
+      </button>
+
+      <div className="insights" style={{ marginTop: "2.5rem" }}>
+        <div style={{
+          display: "flex",
+          justifyContent: "space-between",
+          flexWrap: "wrap",
+          gap: "1rem"
+        }}>
+          <div style={boxStyle}><h3>500+</h3><p>Senior Citizens Connected</p></div>
+          <div style={boxStyle}><h3>300+</h3><p>Active Volunteers Nationwide</p></div>
+          <div style={boxStyle}><h3>2000+</h3><p>Requests Fulfilled with Care</p></div>
+          <div style={boxStyle}><h3>50+</h3><p>Cities Covered Across India</p></div>
+        </div>
+      </div>
+
+      <div className="contact-section" style={{ marginTop: "3rem" }}>
+        <h2>Contact Us</h2>
+        <p>Email: support@elderhub.org</p>
+        <p>Phone: +91 98765 43210</p>
+        <p>Address: Elder Hub, Block A, Community Center, New Delhi - 110001</p>
+      </div>
+    </div>
+  );
+};
+
+const boxStyle = {
+  backgroundColor: "#f5f5f5",
+  padding: "1.5rem",
+  borderRadius: "8px",
+  width: "220px",
+  textAlign: "center",
+  boxShadow: "0 2px 5px rgba(0,0,0,0.1)"
+};
+
+export default Home;
