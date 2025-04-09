@@ -1,0 +1,57 @@
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import "./styles.css";
+
+const Applications = () => {
+  const navigate = useNavigate();
+
+  const handleRequest = () => {
+    alert("Volunteer request submitted successfully!");
+  };
+
+  return (
+    <div className="applications-container">
+      <header className="dashboard-header">
+        <h1 className="logo">Elder Hub</h1>
+        <nav>
+          <ul>
+            <li><a href="/dashboard">Home</a></li>
+            <li><a href="/applications">Applications</a></li>
+            <li><a href="/insights">Insights</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main className="applications-content">
+        <h2 className="app-heading">Support Provided by Elder Hub</h2>
+        <div className="app-section volunteer">
+          <h3>Volunteer Support</h3>
+          <p>Connect with trusted volunteers for daily needs and companionship.</p>
+        </div>
+
+        <div className="app-section mental">
+          <h3>Mental Health Counseling</h3>
+          <p>Access professional counseling and emotional support when needed.</p>
+        </div>
+
+        <div className="app-section grocery">
+          <h3>Grocery Shopping</h3>
+          <p>Volunteers help you shop for groceries and deliver essentials to your doorstep.</p>
+        </div>
+
+        <div className="app-section exercise">
+          <h3>Physical Help & Exercise</h3>
+          <p>Engage in yoga, light workouts, or physiotherapy with the assistance of a volunteer.</p>
+        </div>
+
+        <div className="request-button-container">
+          <button className="request-button" onClick={handleRequest}>Request for Volunteer</button>
+        </div>
+      </main>
+    </div>
+  );
+};
+
+export default Applications;
+
