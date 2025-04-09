@@ -1,0 +1,63 @@
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import "./styles.css";
+
+const Dashboard = () => {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    navigate("/login");
+  };
+
+  const goToApplications = () => {
+    navigate("/applications");
+  };
+
+  return (
+    <div className="dashboard-container">
+      <header className="dashboard-header">
+        <h1 className="logo">Elder Hub</h1>
+        <nav>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><button className="nav-btn" onClick={goToApplications}>Applications</button></li>
+            <li><a href="#insights">Insights</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><button onClick={handleLogout}>Logout</button></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main className="dashboard-content">
+        <section id="about" className="content-box">
+          <h2>Welcome to Elder Hub</h2>
+          <p>
+            Elder Hub is a digital platform that connects senior citizens with
+            volunteers who can offer essential support and companionship. Whether
+            it’s emotional, mental, or physical support—our volunteers are just a
+            message away.
+          </p>
+        </section>
+
+        <section id="insights" className="content-box">
+          <h2>Insights for Citizens and Volunteers</h2>
+          <p>
+            Senior citizens gain quick access to daily assistance, improving their
+            quality of life and independence. Volunteers benefit from meaningful
+            connections and the joy of helping others, enriching their personal and
+            social experience.
+          </p>
+        </section>
+
+        <section id="contact" className="content-box">
+          <h2>Contact Us</h2>
+          <p>Email: support@elderhub.org</p>
+          <p>Phone: +91 9876543210</p>
+          <p>Visit: <a href="http://www.elderhub.org/">www.Elderhub.org</a></p>
+        </section>
+      </main>
+    </div>
+  );
+};
+
+export default Dashboard;
